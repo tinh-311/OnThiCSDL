@@ -208,7 +208,7 @@ having count(magv) >= 2
 -- Cau 27. Danh sách tên của những môn học đã được phân công giảng dạy trong học kỳ 1 năm ‘2014-2015’ nhưng không có sinh viên đăng ký.
 select *
 from MONHOC
-where mamh not in (
+where mamh in (
 select mh.mamh
 from MONHOC as mh join GIANGDAY as gd on mh.mamh = gd.mamh
 where gd.hocky = 1 and gd.namhoc = '2014-2015'
