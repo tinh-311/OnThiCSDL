@@ -214,9 +214,9 @@ from MONHOC as mh join GIANGDAY as gd on mh.mamh = gd.mamh
 where gd.hocky = 1 and gd.namhoc = '2014-2015'
 )
 and mamh not in (
-select dk.mamh
-from DANGKY as dk join SINHVIEN as sv on dk.masv = sv.masv
-where dk.hocky = 1 and dk.namhoc='2014-2015'
+select mamh
+from DANGKY
+where hocky = 1 and namhoc = '2014-2015'
 )
 
 -- Cau 28. Danh sách tên của những sinh viên chưa đăng ký học môn ‘Cấu trúc dữ liệu’ trong học kỳ 1 năm ‘2014-2015’.
